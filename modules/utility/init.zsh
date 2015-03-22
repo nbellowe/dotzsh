@@ -56,7 +56,7 @@ alias pu='pushd'
 alias rm="${aliases[rm]:-rm} -i"
 alias type='type -a'
 
-alias l='ls -1A'         # Lists in one column, hidden files.
+alias l='ls -l'         # Lists in one column, hidden files.
 alias ll='ls -lh'        # Lists human readable sizes.
 alias lr='ll -R'         # Lists human readable sizes, recursively.
 alias la='ll -A'         # Lists human readable sizes, hidden files.

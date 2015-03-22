@@ -53,14 +53,9 @@ unsetopt BG_NICE          # Don't run all background jobs at a lower priority.
 unsetopt HUP              # Don't kill jobs on shell exit.
 unsetopt CHECK_JOBS       # Don't report on jobs when shell exit.
 
-# Grep
-if zstyle -t ':dotzsh:module:environment:grep' color; then
-  export GREP_OPTIONS='--color=auto'
-fi
-
 # Set the PAGER
 zstyle -s ':dotzsh:module:environment' pager 'pager'
-if [[ "$editor" == (less|) ]]; then
+if [[ "$editor" == (less|vi) ]]; then
   export PAGER='less'
 
   # Set the default Less options.
