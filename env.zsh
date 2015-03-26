@@ -39,6 +39,7 @@ unset path_file
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /Applications/VMware\ Fusion.app/Contents/Library
   /usr/local/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}
