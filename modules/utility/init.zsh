@@ -24,14 +24,14 @@ alias dzs='source ~/.zshrc && echo "Reloaded $HOME/.zshrc!"'
 alias dzD='setopt XTRACE && echo "DEBUG ENABLED" && dzs'
 alias dzd='unsetopt XTRACE && dzs'
 
-# Disable correction.
-for command in ack cd cp ebuild gcc gist grep heroku \
-  ln man mkdir mv mysql rm scp
-do
-  if (( $+commands[$command] )); then
-    alias $command="nocorrect ${command}"
-  fi
-done
+# Don't disable correction.
+#for command in ack cd cp ebuild gcc gist grep heroku \
+#  ln man mkdir mv mysql rm scp
+#do
+#  if (( $+commands[$command] )); then
+#    alias $command="nocorrect ${command}"
+#  fi
+#done
 
 # Disable globbing.
 alias fc='noglob fc'
