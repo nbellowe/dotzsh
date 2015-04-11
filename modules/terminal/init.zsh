@@ -102,7 +102,9 @@ function set-title-precmd {
     if [[ ! -z $SSH_CONNECTION ]]; then
       SSHHOST="$HOSTNAME:"
       if [[ "$TERM" == ((x|a|ml|dt|E)term*|(u|)rxvt*) ]]; then
-        tab_$_prompt_host
+        if [[ "$OS" == "Darwin" ]]; then
+          tab_$_prompt_host
+        fi
       fi
     else
       tab_reset
